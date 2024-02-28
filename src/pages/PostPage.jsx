@@ -43,7 +43,7 @@ export const PostPage = () => {
 			toast('Post deleted')
 			navigate('/posts')
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}
 
@@ -53,7 +53,7 @@ export const PostPage = () => {
 			dispatch(createComment({ postId, comment }))
 			setComment('')
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}
 
@@ -61,7 +61,7 @@ export const PostPage = () => {
 		try {
 			dispatch(getPostComments(params.id))
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}, [params.id, dispatch])
 

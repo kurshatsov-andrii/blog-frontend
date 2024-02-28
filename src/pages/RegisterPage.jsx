@@ -26,7 +26,7 @@ export const RegisterPage = () => {
 			setPassword('')
 			setUsername('')
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}
 

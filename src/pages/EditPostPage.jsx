@@ -3,6 +3,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import { updatePost } from '../redux/features/post/postSlice'
+import { toast } from 'react-toastify'
 
 import axios from '../utils/axios'
 
@@ -35,7 +36,7 @@ export const EditPostPage = () => {
 			dispatch(updatePost(updatedPost))
 			navigate('/posts')
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}
 

@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from '../../../utils/axios'
+import { toast } from 'react-toastify'
 
 const initialState = {
 	user: null,
@@ -21,7 +22,7 @@ export const registerUser = createAsyncThunk(
 			}
 			return data
 		} catch (error) {
-			console.log(error)
+			return toast(error)
 		}
 	}
 )
@@ -39,7 +40,7 @@ export const loginUser = createAsyncThunk(
 			}
 			return data
 		} catch (error) {
-			console.log(error)
+			return toast(error)
 		}
 	}
 )
@@ -49,7 +50,7 @@ export const getMe = createAsyncThunk('auth/loginUser', async () => {
 		const { data } = await axios.get('/auth/me')
 		return data
 	} catch (error) {
-		console.log(error)
+		return toast(error)
 	}
 })
 

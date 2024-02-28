@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from '../../../utils/axios'
+import { toast } from 'react-toastify'
 
 const initialState = {
 	comments: [],
@@ -16,7 +17,7 @@ export const createComment = createAsyncThunk(
 			})
 			return data
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}
 )
@@ -28,7 +29,7 @@ export const getPostComments = createAsyncThunk(
 			const { data } = await axios.get(`/posts/comments/${postId}`)
 			return data
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}
 )

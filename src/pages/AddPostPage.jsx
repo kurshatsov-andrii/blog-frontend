@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { createPost } from '../redux/features/post/postSlice'
+import { toast } from 'react-toastify'
 
 export const AddPostPage = () => {
 	const [title, setTitle] = useState('')
@@ -20,7 +21,7 @@ export const AddPostPage = () => {
 			dispatch(createPost(data))
 			navigate('/')
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}
 	const clearFormHandler = () => {

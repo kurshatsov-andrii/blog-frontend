@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { PostItem } from '../components/PostItem'
 import axios from '../utils/axios'
+import { toast } from 'react-toastify'
 
 export const PostsPage = () => {
 	const [posts, setPosts] = useState([])
@@ -12,7 +13,7 @@ export const PostsPage = () => {
 			const { data } = await axios.get('/posts/user/me')
 			setPosts(data)
 		} catch (error) {
-			console.log(error)
+			toast(error)
 		}
 	}
 
