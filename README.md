@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+## Sport Blog Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple blog application developed as a sport blog project.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The application consists of 4 public pages:
 
-### `npm start`
+1. Home Page: Provides an overview of all sporting events posted by users.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Blog Page](./public/blog-page.jpg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Registration Page: User registration page.
 
-### `npm test`
+![Registration Page](./public/registration-page.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Login Page: User authorization page.
 
-### `npm run build`
+![Login Page](./public/login-page.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Post Page: Individual post page with description and comments.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Post Page](./public/post-page.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application consists of 3 private pages:
 
-### `npm run eject`
+1. Home Page: Provides an overview of all sporting events posted by users.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Home Page](./public/home-page.jpg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. My Posts Page: Page of posted posts by logged in user.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![My Post Page](./public/my-post-page.jpg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Add Post Page: Page for adding a post by a logged in user.
 
-## Learn More
+![Add Post Page](./public/add-post-page.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The user can add a picture, title and description of the sports event.
 
-### Code Splitting
+- The user can change the picture, title and description of the sports event.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The user can delete a sports event.
 
-### Analyzing the Bundle Size
+- The user can see how many times a sports event has been viewed and go to a specific event from the sidebar - popular posts.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- A logged-in user can add a comment to a sports post.
 
-### Making a Progressive Web App
+## Technical Requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- The application is built with React.
+- Routing is implemented using React Router.
+- User data and his posts are placed in the database MongoDB.
+- User actions are preserved even after page refresh.
 
-### Advanced Configuration
+## Non-Existent Route
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- If a user accesses a route that does not exist, they will be redirected to the home page.
 
-### Deployment
+## Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- React
+- Redux
+- React Router
+- Axios (for API requests)
 
-### `npm run build` fails to minify
+## API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The application utilizes a backend developed by Andrii Kurshatsov. Feel free to familiarize yourself with it
+[here](https://github.com/kurshatsov-andrii/blog-back-end)
+
+## Redux State
+
+The Redux store manages the application's state, encompassing tokens, user and event information.
+
+## Authors
+
+- Created by Andrii Kurshatsov
