@@ -3,7 +3,7 @@ import { AiFillEye, AiOutlineMessage } from 'react-icons/ai'
 import Moment from 'react-moment'
 import { Link } from 'react-router-dom'
 
-export const SERVER_HOST = 'http://localhost:3002/'
+export const SERVER_HOST = 'https://blog-back-end-477b.onrender.com/'
 
 export const PostItem = ({ post }) => {
 	if (!post) {

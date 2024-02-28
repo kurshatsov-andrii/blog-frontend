@@ -1,5 +1,5 @@
 import { Layout } from './components/Layout.jsx'
-import { Routes, Route } from 'react-router-dom'
+import { Navigate, Routes, Route } from 'react-router-dom'
 
 import { MainPage } from './pages/MainPage'
 import { PostsPage } from './pages/PostsPage'
@@ -24,13 +24,14 @@ function App() {
 	return (
 		<Layout>
 			<Routes>
-				<Route path='/' element={<MainPage />} />
+				<Route path='blog-frontend' element={<MainPage />} />
 				<Route path='posts' element={<PostsPage />} />
 				<Route path=':id' element={<PostPage />} />
 				<Route path=':id/edit' element={<EditPostPage />} />
 				<Route path='new' element={<AddPostPage />} />
 				<Route path='register' element={<RegisterPage />} />
 				<Route path='login' element={<LoginPage />} />
+				<Route path='*' element={<Navigate to='blog-frontend' replace />} />
 			</Routes>
 			<ToastContainer position='bottom-right' />
 		</Layout>
